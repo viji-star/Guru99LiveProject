@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import com.livebase.TestBase;
 import com.livepage.LoginPageObjects;
+import com.liveutility.TestUtility;
 
 
 public class LoginPageTest extends TestBase {
@@ -28,34 +29,44 @@ public class LoginPageTest extends TestBase {
 	
 	
 	@DataProvider(name = "Differentsetofdataforlogin")
-	public Object[][] data()
+	public Object[][] data() throws IOException
 	{
-		Object [][] combodata = {
-				{"btnLogin","UmYgepY"},
-				{"mngr381722","btnLogin"},
-				{" "," "},
-				{"mngr381722","UmYgepY"}		
-		};
-		
-		return combodata;
+
+//		Object [][] combodata = {
+//				{"btnLogin","UmYgepY"},
+//				{"mngr381722","btnLogin"},
+//				{" "," "},
+//				{"mngr381722","UmYgepY"}		
+//	};
+
+		return TestUtility.dataFromExcel();
+		//return combodata;
 	}
 	
 	
 	@Test(priority =0)
-	public void LogoPagelogoTest()
+	public void LogoPagelogoTest() throws IOException
 	{
 		Assert.assertTrue(lp.validatelogo());
+		TestUtility.screenshot();
 		System.out.println("Logo is displayed");
 	}
 	
 	@Test(priority =1,dataProvider="Differentsetofdataforlogin")
-	public void LogoPageloginTest(String user,String pswd)
+	public void LogoPageloginTest(String user,String pswd,String scenario)
 	{
 		String expected = "Guru99 Bank Manager HomePage";
 		//String actual = lp.loginsuccess(prob.getProperty("user"), prob.getProperty("pswd"));
 		String actual = lp.loginsuccess(user, pswd);
+		if(scenario.equalsIgnoreCase("Both Correct"))
+		{
 		Assert.assertEquals(actual, expected);
 		System.out.println("Login Sucessfull");
+		}
+		else
+		{
+			Assert.assertNotEquals(actual, expected);
+		}
 		
 	}
 	

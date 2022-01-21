@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" ignored="0" total="6" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="45161" started-at="2022-01-21T15:15:06 IST" finished-at="2022-01-21T15:15:51 IST">
+  <suite name="Default suite" duration-ms="80575" started-at="2022-01-21T23:41:23 IST" finished-at="2022-01-21T23:42:43 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="45161" started-at="2022-01-21T15:15:06 IST" finished-at="2022-01-21T15:15:51 IST">
+    <test name="Default test" duration-ms="80575" started-at="2022-01-21T23:41:23 IST" finished-at="2022-01-21T23:42:43 IST">
       <class name="com.livetest.LoginPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.livetest.LoginPageTest@150efb8]" name="setup" is-config="true" duration-ms="13492" started-at="2022-01-21T15:15:06 IST" finished-at="2022-01-21T15:15:20 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.livetest.LoginPageTest@9273a8]" name="setup" is-config="true" duration-ms="18181" started-at="2022-01-21T23:41:23 IST" finished-at="2022-01-21T23:41:41 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="LogoPagelogoTest()[pri:0, instance:com.livetest.LoginPageTest@150efb8]" name="LogoPagelogoTest" duration-ms="838" started-at="2022-01-21T15:15:20 IST" finished-at="2022-01-21T15:15:21 IST">
+        <test-method status="PASS" signature="LogoPagelogoTest()[pri:0, instance:com.livetest.LoginPageTest@9273a8]" name="LogoPagelogoTest" duration-ms="2906" started-at="2022-01-21T23:41:41 IST" finished-at="2022-01-21T23:41:44 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoPagelogoTest -->
-        <test-method status="FAIL" signature="LogoPageloginTest(java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@150efb8]" name="LogoPageloginTest" duration-ms="3813" started-at="2022-01-21T15:15:21 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-21T15:15:25 IST">
+        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@9273a8]" name="LogoPageloginTest" duration-ms="6070" started-at="2022-01-21T23:41:52 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-21T23:41:58 IST">
           <params>
             <param index="0">
               <value>
@@ -27,55 +27,16 @@
                 <![CDATA[UmYgepY]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[Passwordcorrect]]>
+              </value>
+            </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Guru99 Bank Manager HomePage] but found [Guru99 Bank Home Page]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Guru99 Bank Manager HomePage] but found [Guru99 Bank Home Page]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at com.livetest.LoginPageTest.LogoPageloginTest(LoginPageTest.java:57)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoPageloginTest -->
-        <test-method status="FAIL" signature="LogoPageloginTest(java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@150efb8]" name="LogoPageloginTest" duration-ms="5177" started-at="2022-01-21T15:15:25 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-21T15:15:30 IST">
+        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@9273a8]" name="LogoPageloginTest" duration-ms="6031" started-at="2022-01-21T23:41:58 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-21T23:42:04 IST">
           <params>
             <param index="0">
               <value>
@@ -87,55 +48,79 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
                 <![CDATA[btnLogin]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[Usernamecorrect]]>
+              </value>
+            </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Guru99 Bank Manager HomePage] but found [Guru99 Bank Home Page]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Guru99 Bank Manager HomePage] but found [Guru99 Bank Home Page]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at com.livetest.LoginPageTest.LogoPageloginTest(LoginPageTest.java:57)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoPageloginTest -->
-        <test-method status="FAIL" signature="LogoPageloginTest(java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@150efb8]" name="LogoPageloginTest" duration-ms="5658" started-at="2022-01-21T15:15:30 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-21T15:15:35 IST">
+        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@9273a8]" name="LogoPageloginTest" duration-ms="6121" started-at="2022-01-21T23:42:04 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-21T23:42:10 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[btnLogin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[btnLogin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Both wrong]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogoPageloginTest -->
+        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@9273a8]" name="LogoPageloginTest" duration-ms="6201" started-at="2022-01-21T23:42:10 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-21T23:42:16 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mngr381722]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Password blank]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogoPageloginTest -->
+        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@9273a8]" name="LogoPageloginTest" duration-ms="5908" started-at="2022-01-21T23:42:16 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-21T23:42:22 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[UmYgepY]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Username blank]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogoPageloginTest -->
+        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@9273a8]" name="LogoPageloginTest" duration-ms="5115" started-at="2022-01-21T23:42:22 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-21T23:42:27 IST">
           <params>
             <param index="0">
               <value>
@@ -147,55 +132,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
                 <![CDATA[ ]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[Both blank]]>
+              </value>
+            </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Guru99 Bank Manager HomePage] but found [Guru99 Bank Home Page]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Guru99 Bank Manager HomePage] but found [Guru99 Bank Home Page]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at com.livetest.LoginPageTest.LogoPageloginTest(LoginPageTest.java:57)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoPageloginTest -->
-        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@150efb8]" name="LogoPageloginTest" duration-ms="12566" started-at="2022-01-21T15:15:35 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-21T15:15:48 IST">
+        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@9273a8]" name="LogoPageloginTest" duration-ms="11139" started-at="2022-01-21T23:42:27 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-21T23:42:38 IST">
           <params>
             <param index="0">
               <value>
@@ -207,21 +153,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
                 <![CDATA[UmYgepY]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[Both correct]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoPageloginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.livetest.LoginPageTest@150efb8]" name="tearDown" is-config="true" duration-ms="3222" started-at="2022-01-21T15:15:48 IST" finished-at="2022-01-21T15:15:51 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.livetest.LoginPageTest@9273a8]" name="tearDown" is-config="true" duration-ms="4803" started-at="2022-01-21T23:42:39 IST" finished-at="2022-01-21T23:42:43 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.livetest.LoginPageTest -->
-      <class name="com.livetest.HomePageTest">
-        <test-method status="PASS" signature="sample()[pri:0, instance:com.livetest.HomePageTest@1579e0f]" name="sample" duration-ms="68" started-at="2022-01-21T15:15:20 IST" finished-at="2022-01-21T15:15:20 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sample -->
-      </class> <!-- com.livetest.HomePageTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
