@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -15,12 +17,20 @@ import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.livebase.TestBase;
 
 public class TestUtility extends TestBase{
 
 	public static int pageLoadTimeOut = 20;
 	public static int implicitwait = 10;
+	public static ExtentSparkReporter sparkreport; // To improve look and feel
+	public static ExtentReports report; //To create the report having an entry for each TC
+	
+	
 	
 	public  static void waitalertaccept()
 	{
@@ -65,10 +75,39 @@ public class TestUtility extends TestBase{
 	}
 	
 	
-	public static void screenshot() throws IOException
+	public static String screenshot(String methodname) throws IOException
 	{
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileHandler.copy(src, new File("C:\\Users\\Windows 7\\git\\Guru99LiveProject\\LiveProject\\Screenshots\\Screen.png"));
+		String dest = System.getProperty("user.dir") + "//Screenshots//" + methodname + TestUtility.datename()
+				+ ".png" ;
+		FileHandler.copy(src, new File(dest));
+		return dest;
+	}
+	
+	public static ExtentReports extendreportsetup()
+	{
+		
+		sparkreport = new ExtentSparkReporter (System.getProperty("user.dir") + "//ExtentReport//" + "myReport" + TestUtility.datename() + ".html");
+		sparkreport.config().setDocumentTitle("Automation Test Results");
+		sparkreport.config().setReportName("Functional report");
+		sparkreport.config().setTheme(Theme.STANDARD);
+		
+		report = new ExtentReports();
+		report.attachReporter(sparkreport); //Attach the added values to the report
+		
+		report.setSystemInfo("browser","Chrome");
+		report.setSystemInfo("version","96 series");
+		report.setSystemInfo("Operating System","Windows");
+		report.setSystemInfo("Tester","Viji");
+		
+		return report;
+	}
+	
+	public static String datename()
+	{
+		SimpleDateFormat date = new SimpleDateFormat("yyyyHHddHHmmss");
+		String dateformatname = date.format(new Date());
+		return dateformatname;
 	}
 	
 }

@@ -3,12 +3,15 @@ package com.livetest;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.livebase.TestBase;
 import com.livepage.LoginPageObjects;
 import com.liveutility.TestUtility;
@@ -17,14 +20,16 @@ import com.liveutility.TestUtility;
 public class LoginPageTest extends TestBase {
 
 	
-	
 	public LoginPageObjects lp;
 	public HomePageTest hp;
+	
+	
 	@BeforeTest
 	public void setup() throws IOException
 	{
 		browserlaunch();
 		lp = new LoginPageObjects();
+		
 	}
 	
 	
@@ -47,20 +52,24 @@ public class LoginPageTest extends TestBase {
 	@Test(priority =0)
 	public void LogoPagelogoTest() throws IOException
 	{
-		Assert.assertTrue(lp.validatelogo());
-		TestUtility.screenshot();
+		
+		//Assert.assertTrue(lp.validatelogo());
+		Assert.assertFalse(lp.validatelogo());
+		//TestUtility.screenshot("LogoPagelogoTest");
 		System.out.println("Logo is displayed");
 	}
 	
 	@Test(priority =1,dataProvider="Differentsetofdataforlogin")
 	public void LogoPageloginTest(String user,String pswd,String scenario)
 	{
+		
 		String expected = "Guru99 Bank Manager HomePage";
 		//String actual = lp.loginsuccess(prob.getProperty("user"), prob.getProperty("pswd"));
 		String actual = lp.loginsuccess(user, pswd);
 		if(scenario.equalsIgnoreCase("Both Correct"))
 		{
-		Assert.assertEquals(actual, expected);
+		//Assert.assertEquals(actual, expected);
+		Assert.assertNotEquals(actual, expected);
 		System.out.println("Login Sucessfull");
 		}
 		else
@@ -71,9 +80,9 @@ public class LoginPageTest extends TestBase {
 	}
 	
 	
-	
 	@AfterTest
 	public void tearDown() {
+	
 		driver.quit();
 	}
 }

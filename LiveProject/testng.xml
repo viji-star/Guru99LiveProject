@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test  name="Test">
+<suite name="Suite" parallel = "classes" thread-count = "2">
 
+<listeners>
+<listener class-name ="com.liveutility.Listeners"/>
+</listeners>
+
+  <test  name="Test">
     <packages>
-      <package name="com.livetest.*"/>
-      
+     <package name="com.livetest.*"/>
     </packages>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
