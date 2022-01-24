@@ -53,8 +53,8 @@ public class LoginPageTest extends TestBase {
 	public void LogoPagelogoTest() throws IOException
 	{
 		
-		//Assert.assertTrue(lp.validatelogo());
-		Assert.assertFalse(lp.validatelogo());
+		Assert.assertTrue(lp.validatelogo());
+		//Assert.assertFalse(lp.validatelogo());
 		//TestUtility.screenshot("LogoPagelogoTest");
 		System.out.println("Logo is displayed");
 	}
@@ -63,18 +63,20 @@ public class LoginPageTest extends TestBase {
 	public void LogoPageloginTest(String user,String pswd,String scenario)
 	{
 		
-		String expected = "Guru99 Bank Manager HomePage";
+		String expectedtitle = "Guru99 Bank Manager HomePage";
+		String expecteddata = "User or Password is not valid";
 		//String actual = lp.loginsuccess(prob.getProperty("user"), prob.getProperty("pswd"));
-		String actual = lp.loginsuccess(user, pswd);
+		String actualvalue = lp.loginsuccess(user, pswd,scenario);
 		if(scenario.equalsIgnoreCase("Both Correct"))
 		{
 		//Assert.assertEquals(actual, expected);
-		Assert.assertNotEquals(actual, expected);
-		System.out.println("Login Sucessfull");
+		Assert.assertEquals(actualvalue, expectedtitle);
+		System.out.println("Login Sucessfull for valid data");
 		}
 		else
 		{
-			Assert.assertNotEquals(actual, expected);
+			Assert.assertEquals(actualvalue, expecteddata);
+			System.out.println("Login not Sucessfull for invalid data");
 		}
 		
 	}

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="9" passed="7">
+<testng-results skipped="0" failed="1" ignored="0" total="9" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="93239" started-at="2022-01-22T21:11:59 IST" finished-at="2022-01-22T21:13:32 IST">
+  <suite name="Suite" duration-ms="95756" started-at="2022-01-22T22:31:12 IST" finished-at="2022-01-22T22:32:47 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="93239" started-at="2022-01-22T21:11:59 IST" finished-at="2022-01-22T21:13:32 IST">
+    <test name="Test" duration-ms="95756" started-at="2022-01-22T22:31:12 IST" finished-at="2022-01-22T22:32:47 IST">
       <class name="com.livetest.LoginPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.livetest.LoginPageTest@1bf57b3]" name="setup" is-config="true" duration-ms="27799" started-at="2022-01-22T21:11:59 IST" finished-at="2022-01-22T21:12:27 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.livetest.LoginPageTest@1bf57b3]" name="setup" is-config="true" duration-ms="35053" started-at="2022-01-22T22:31:12 IST" finished-at="2022-01-22T22:31:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="LogoPagelogoTest()[pri:0, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPagelogoTest" duration-ms="1975" started-at="2022-01-22T21:12:27 IST" finished-at="2022-01-22T21:12:29 IST">
+        <test-method status="FAIL" signature="LogoPagelogoTest()[pri:0, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPagelogoTest" duration-ms="1655" started-at="2022-01-22T22:31:47 IST" finished-at="2022-01-22T22:31:49 IST">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [false] but found [true]]]>
@@ -44,7 +44,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoPagelogoTest -->
-        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPageloginTest" duration-ms="8892" started-at="2022-01-22T21:12:38 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-22T21:12:47 IST">
+        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPageloginTest" duration-ms="9021" started-at="2022-01-22T22:31:58 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-22T22:32:07 IST">
           <params>
             <param index="0">
               <value>
@@ -65,7 +65,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoPageloginTest -->
-        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPageloginTest" duration-ms="7261" started-at="2022-01-22T21:12:47 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-22T21:12:54 IST">
+        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPageloginTest" duration-ms="5076" started-at="2022-01-22T22:32:07 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-22T22:32:12 IST">
           <params>
             <param index="0">
               <value>
@@ -86,7 +86,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoPageloginTest -->
-        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPageloginTest" duration-ms="7390" started-at="2022-01-22T21:12:54 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-22T21:13:01 IST">
+        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPageloginTest" duration-ms="5350" started-at="2022-01-22T22:32:12 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-22T22:32:17 IST">
           <params>
             <param index="0">
               <value>
@@ -107,7 +107,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoPageloginTest -->
-        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPageloginTest" duration-ms="5106" started-at="2022-01-22T21:13:01 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-22T21:13:06 IST">
+        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPageloginTest" duration-ms="5267" started-at="2022-01-22T22:32:17 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-22T22:32:22 IST">
           <params>
             <param index="0">
               <value>
@@ -128,7 +128,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoPageloginTest -->
-        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPageloginTest" duration-ms="5052" started-at="2022-01-22T21:13:06 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-22T21:13:11 IST">
+        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPageloginTest" duration-ms="4691" started-at="2022-01-22T22:32:22 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-22T22:32:27 IST">
           <params>
             <param index="0">
               <value>
@@ -149,7 +149,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoPageloginTest -->
-        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPageloginTest" duration-ms="6146" started-at="2022-01-22T21:13:11 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-22T21:13:18 IST">
+        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPageloginTest" duration-ms="5373" started-at="2022-01-22T22:32:27 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-22T22:32:32 IST">
           <params>
             <param index="0">
               <value>
@@ -170,7 +170,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoPageloginTest -->
-        <test-method status="FAIL" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPageloginTest" duration-ms="10216" started-at="2022-01-22T21:13:18 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-22T21:13:28 IST">
+        <test-method status="PASS" signature="LogoPageloginTest(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.livetest.LoginPageTest@1bf57b3]" name="LogoPageloginTest" duration-ms="11992" started-at="2022-01-22T22:32:32 IST" data-provider="Differentsetofdataforlogin" finished-at="2022-01-22T22:32:44 IST">
           <params>
             <param index="0">
               <value>
@@ -188,46 +188,16 @@ at java.lang.Thread.run(Unknown Source)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[did not expect [Guru99 Bank Manager HomePage] but found [Guru99 Bank Manager HomePage]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: did not expect [Guru99 Bank Manager HomePage] but found [Guru99 Bank Manager HomePage]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failEquals(Assert.java:1041)
-at org.testng.Assert.assertNotEqualsImpl(Assert.java:147)
-at org.testng.Assert.assertNotEquals(Assert.java:1531)
-at org.testng.Assert.assertNotEquals(Assert.java:1535)
-at com.livetest.LoginPageTest.LogoPageloginTest(LoginPageTest.java:72)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoPageloginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.livetest.LoginPageTest@1bf57b3]" name="tearDown" is-config="true" duration-ms="3761" started-at="2022-01-22T21:13:28 IST" finished-at="2022-01-22T21:13:32 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.livetest.LoginPageTest@1bf57b3]" name="tearDown" is-config="true" duration-ms="3102" started-at="2022-01-22T22:32:44 IST" finished-at="2022-01-22T22:32:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.livetest.LoginPageTest -->
       <class name="com.livetest.HomePageTest">
-        <test-method status="PASS" signature="sample()[pri:3, instance:com.livetest.HomePageTest@d7259e]" name="sample" duration-ms="192" started-at="2022-01-22T21:12:27 IST" finished-at="2022-01-22T21:12:27 IST">
+        <test-method status="PASS" signature="sample()[pri:3, instance:com.livetest.HomePageTest@d7259e]" name="sample" duration-ms="317" started-at="2022-01-22T22:31:47 IST" finished-at="2022-01-22T22:31:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sample -->

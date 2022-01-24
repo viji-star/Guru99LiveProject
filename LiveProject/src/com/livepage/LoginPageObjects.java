@@ -35,13 +35,16 @@ public class LoginPageObjects extends TestBase{
 	
 	}
 	
-	public String loginsuccess(String us, String ps)
+	public String loginsuccess(String us, String ps,String scenario)
 	{
 		username.sendKeys(us);
 		password.sendKeys(ps);
 		login.click();
-		TestUtility.waitalertaccept();
+		String alertdata =TestUtility.waitalertaccept();
 		String actualhomepagetitle = driver.getTitle();
+		if(scenario.equalsIgnoreCase("Both Correct"))
 		return actualhomepagetitle;
+		else 
+		return alertdata;
 	}
 }

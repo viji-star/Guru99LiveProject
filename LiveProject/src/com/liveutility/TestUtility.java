@@ -30,21 +30,25 @@ public class TestUtility extends TestBase{
 	public static ExtentSparkReporter sparkreport; // To improve look and feel
 	public static ExtentReports report; //To create the report having an entry for each TC
 	
+	public static String alerttext;
 	
-	
-	public  static void waitalertaccept()
+	public  static String waitalertaccept()
 	{
 		
 		WebDriverWait wait = new WebDriverWait(driver,5);
 		try
 		{
 		if(wait.until(ExpectedConditions.alertIsPresent())!=null)
+			
+		alerttext =driver.switchTo().alert().getText() ;
 		driver.switchTo().alert().accept();
 		}
 		catch(Exception e)
 		{
 			//System.out.println("There is no alert present");
+			alerttext ="There is no alert present";
 		}
+		return alerttext;
 	}
 	
 	

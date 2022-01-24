@@ -8,7 +8,6 @@
     <classes>
       <class name="com.livetest.LoginPageTest">
         <methods>
-          <include name="LogoPageloginTest" invocation-numbers="6"/>
           <include name="LogoPagelogoTest"/>
           <include name="tearDown"/>
           <include name="setup"/>
