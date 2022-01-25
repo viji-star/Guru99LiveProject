@@ -13,6 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.xmlbeans.impl.xb.ltgfmt.TestCase.Files;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -52,13 +53,13 @@ public class TestUtility extends TestBase{
 	}
 	
 	
-	public static Object[][] dataFromExcel() throws IOException
+	public static Object[][] dataFromExcel(int sheetnumber) throws IOException
 	{
 		
 		String excelpath = "C:\\Users\\Windows 7\\git\\Guru99LiveProject\\LiveProject\\src\\com\\liveutility\\TestData.xlsx";
 		FileInputStream fp = new FileInputStream(excelpath);
 		XSSFWorkbook wb = new XSSFWorkbook(fp);
-		XSSFSheet sheet = wb.getSheetAt(0);
+		XSSFSheet sheet = wb.getSheetAt(sheetnumber);
 		int rowcount = sheet.getPhysicalNumberOfRows();
 		XSSFRow row = sheet.getRow(0);
 		int colcount = row.getLastCellNum();
@@ -91,7 +92,7 @@ public class TestUtility extends TestBase{
 	public static ExtentReports extendreportsetup()
 	{
 		
-		sparkreport = new ExtentSparkReporter (System.getProperty("user.dir") + "//ExtentReport//" + "myReport" + TestUtility.datename() + ".html");
+		sparkreport = new ExtentSparkReporter (System.getProperty("user.dir") + "//ExtentReport//" + "report" + TestUtility.datename() + ".html");
 		sparkreport.config().setDocumentTitle("Automation Test Results");
 		sparkreport.config().setReportName("Functional report");
 		sparkreport.config().setTheme(Theme.STANDARD);
@@ -109,9 +110,17 @@ public class TestUtility extends TestBase{
 	
 	public static String datename()
 	{
-		SimpleDateFormat date = new SimpleDateFormat("yyyyHHddHHmmss");
+		SimpleDateFormat date = new SimpleDateFormat("yyyyMMddHHmmss");
 		String dateformatname = date.format(new Date());
 		return dateformatname;
+	}
+	
+	
+	public static void waitsometime(WebElement element)
+	{
+		WebDriverWait wait = new WebDriverWait(driver,5);
+		
+		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
 }

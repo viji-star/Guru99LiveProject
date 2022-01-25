@@ -3,15 +3,12 @@ package com.livetest;
 import java.io.IOException;
 
 import org.testng.Assert;
-import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import com.aventstack.extentreports.Status;
 import com.livebase.TestBase;
 import com.livepage.LoginPageObjects;
 import com.liveutility.TestUtility;
@@ -24,10 +21,10 @@ public class LoginPageTest extends TestBase {
 	public HomePageTest hp;
 	
 	
-	@BeforeTest
+	@BeforeClass
 	public void setup() throws IOException
 	{
-		browserlaunch();
+		TestBase.browserlaunch();
 		lp = new LoginPageObjects();
 		
 	}
@@ -44,7 +41,7 @@ public class LoginPageTest extends TestBase {
 //				{"mngr381722","UmYgepY"}		
 //	};
 
-		return TestUtility.dataFromExcel();
+		return TestUtility.dataFromExcel(0);
 		//return combodata;
 	}
 	
@@ -82,7 +79,7 @@ public class LoginPageTest extends TestBase {
 	}
 	
 	
-	@AfterTest
+	@AfterClass
 	public void tearDown() {
 	
 		driver.quit();

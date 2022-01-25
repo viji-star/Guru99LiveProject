@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.liveutility.TestUtility;
 
@@ -31,6 +32,8 @@ public class TestBase {
 		if((prob.getProperty("browser")).equalsIgnoreCase("chrome"))
 				{
 					System.setProperty("webdriver.chrome.driver","D:\\Selenium\\Drivers\\chromedriver.exe");
+					//ChromeOptions option = new ChromeOptions();
+					//option.addArguments("disable-popup-blocking");
 					driver = new ChromeDriver();
 					
 				}

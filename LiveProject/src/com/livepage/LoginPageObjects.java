@@ -47,4 +47,12 @@ public class LoginPageObjects extends TestBase{
 		else 
 		return alertdata;
 	}
+	
+	public HomePageObjects login(String us, String ps)
+	{
+		username.sendKeys(us);
+		password.sendKeys(ps);
+		login.click();
+		return new HomePageObjects();
+	}
 }

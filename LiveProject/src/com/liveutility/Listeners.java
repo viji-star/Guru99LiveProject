@@ -12,7 +12,7 @@ import com.aventstack.extentreports.Status;
 
 public class Listeners implements ITestListener {
 
-	ExtentReports report = TestUtility.extendreportsetup();; //To update the status of each TC
+	ExtentReports report = TestUtility.extendreportsetup(); //To update the status of each TC
 	ExtentTest test;
 	ThreadLocal <ExtentTest> extentthread = new ThreadLocal <ExtentTest>();
 	@Override
