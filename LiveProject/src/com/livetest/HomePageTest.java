@@ -25,7 +25,7 @@ public HomePageObjects hp;
 		hp =loginobj.login(prob.getProperty("user"), prob.getProperty("pswd"));
 	}
 	
-	@Test(enabled = true)
+	@Test()
 	public void validateManagerIDTest()
 	{
 		String expected = "Manger Id : mngr381722";
@@ -33,7 +33,7 @@ public HomePageObjects hp;
 		Assert.assertEquals(actualvalue, expected);
 	}
 	
-	@Test(enabled = false)
+	@Test()
 	public void validateNewCustomerTest()
 	{
 		Assert.assertTrue(hp.clickOnNewCustomer());

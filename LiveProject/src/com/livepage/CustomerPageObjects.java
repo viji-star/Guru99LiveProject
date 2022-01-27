@@ -18,6 +18,9 @@ public class CustomerPageObjects extends TestBase {
 	@FindBy (xpath = "//input[@type='radio' and @value='f']")
 	WebElement genderfemale;
 	
+	@FindBy(id="dob")
+	WebElement DOB;
+	
 	@FindBy (xpath = "//textarea[@name='addr']")
 	WebElement address;
 	
@@ -42,14 +45,21 @@ public class CustomerPageObjects extends TestBase {
 	@FindBy (xpath = "//input[@value='Submit']")
 	WebElement submitbutton;
 	
+	@FindBy(xpath="//input[@type='reset']")
+	WebElement resetbutton;
+	
+	@FindBy(xpath ="//p[text()='Customer Registered Successfully!!!']")
+	WebElement sucess;
 	
 	public CustomerPageObjects()
 	{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public String addnewcustomer(String cusname,String cusgender,String cusaddrs,String cusstate,String cuspin,String cusmob, String cusemail,String cuspass)
+	public String addnewcustomer(String cusname,String cusgender,String dob,String cusaddrs,String cuscity,String cusstate,String cuspin,String cusmob, String cusemail,String cuspass)
 	{
+		resetbutton.click();
+		
 		customername.sendKeys(cusname);
 		if (cusgender.equalsIgnoreCase("male"))
 		{
@@ -59,20 +69,26 @@ public class CustomerPageObjects extends TestBase {
 		{
 			genderfemale.click();
 		}
-		customername.sendKeys(cusname);
-		customername.sendKeys(cusaddrs);
-		customername.sendKeys(cusstate);
-		customername.sendKeys(cuspin);
-		customername.sendKeys(cusmob);
-		customername.sendKeys(cusemail);
-		customername.sendKeys(cuspass);
+		
+		DOB.sendKeys(dob);
+		address.sendKeys(cusaddrs);
+		city.sendKeys(cuscity);
+		state.sendKeys(cusstate);
+		pin.sendKeys(cuspin);
+		mobile.sendKeys(cusmob);
+		email.sendKeys(cusemail);
+		password.sendKeys(cuspass);
 		
 		submitbutton.click();
 		
 		String cusalertdata = TestUtility.waitalertaccept();
 		
+		if(cusalertdata.equals("There is no alert present"))
+		return sucess.getText();
+		else
 		return cusalertdata;
 	}
 	
 	
 }
+

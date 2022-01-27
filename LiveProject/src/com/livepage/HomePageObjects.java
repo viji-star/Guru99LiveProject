@@ -1,5 +1,7 @@
 package com.livepage;
 
+import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,6 +17,13 @@ public class HomePageObjects extends TestBase {
 	
 	@FindBy (xpath= "//a[contains(text(),'New Customer')]")
 	WebElement Newcustomerlink;
+	
+	@FindBy(xpath="//iframe[@id='google_ads_iframe_/24132379/INTERSTITIAL_DemoGuru99_0']")
+	WebElement frameID;
+	
+	@FindBy(linkText="Delete Customer")
+	WebElement deletelink;
+	
 	public HomePageObjects()
 	{
 		PageFactory.initElements(driver,this);
@@ -30,10 +39,20 @@ public class HomePageObjects extends TestBase {
 	public boolean clickOnNewCustomer()
 	{
 		TestUtility.waitsometime(mangerID);
-		driver.switchTo().frame(0);
-		driver.findElement(By.xpath("//div[@id='dismiss-button']")).click();
 		Newcustomerlink.click();
+		//driver.switchTo().frame(frameID);
+		
+		//driver.findElement(By.xpath("//div[@id='dismiss-button']")).click();
+		
+		//Set<String> s = driver.getWindowHandles();
+		//System.out.println(s.size());
 		return addnewcustomertext.isDisplayed();
 		
+	}
+	
+	public DeleteCusPageObjects clickOnDeleteLink()
+	{
+		deletelink.click();
+		return new DeleteCusPageObjects();
 	}
 }

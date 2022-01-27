@@ -46,7 +46,7 @@ public class LoginPageTest extends TestBase {
 	}
 	
 	
-	@Test(priority =0)
+	@Test(priority =0,enabled = false)
 	public void LogoPagelogoTest() throws IOException
 	{
 		
@@ -57,7 +57,7 @@ public class LoginPageTest extends TestBase {
 	}
 	
 	@Test(priority =1,dataProvider="Differentsetofdataforlogin")
-	public void LogoPageloginTest(String user,String pswd,String scenario)
+	public void LogoPageloginTest(String user,String pswd,String scenario) throws IOException
 	{
 		
 		String expectedtitle = "Guru99 Bank Manager HomePage";
@@ -69,11 +69,13 @@ public class LoginPageTest extends TestBase {
 		//Assert.assertEquals(actual, expected);
 		Assert.assertEquals(actualvalue, expectedtitle);
 		System.out.println("Login Sucessfull for valid data");
+		//TestUtility.dataWriteToExcel("Login Sucessfull for valid data",0,3,scenario);
 		}
 		else
 		{
 			Assert.assertEquals(actualvalue, expecteddata);
 			System.out.println("Login not Sucessfull for invalid data");
+			//TestUtility.dataWriteToExcel("Login Sucessfull for invalid data",0,3,scenario);
 		}
 		
 	}
