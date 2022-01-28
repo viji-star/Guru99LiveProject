@@ -36,6 +36,7 @@ public class TestUtility extends TestBase{
 	public static ExtentReports report; //To create the report having an entry for each TC
 	public static String excelpath = "C:\\Users\\Windows 7\\git\\Guru99LiveProject\\LiveProject\\src\\com\\liveutility\\LoginData.xlsx";
 	
+	//public int value = 10;
 	public static String alerttext;
 	
 	public  static String waitalertaccept()
